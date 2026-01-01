@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Frontend Mentor | Typing Speed Test</title>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <div id="modal-overlay" class="overlay"></div>
+
+      <div id="instruction-modal" class="readb4type">
+        <button id="close-modal-btn" class="close-btn" type="button">&times;</button>
+        <h1>Read Before Typing</h1>
+        <p>
+          Read the quote before typing it. This will help you improve your speed
+          and accuracy.
+        </p>
+        <p>
+          If you mess up, <strong>continue on</strong>. Do not try to fix the
+          error. Keep typing as if you didn't mess up.
+        </p>
+        <h3>The AI will predict your WPM based on your username history.</h3>
+        <p><strong>BACKSPACE IS DISABLED!</strong></p>
+        <p>Once ready, click "New Quote" to start the test.</p>
+        <button id="got-it-btn" class="primary-modal-btn" type="button">Got it!</button>
+      </div>
+      <!-- Test Container -->
+      <main class="test-container">
+        <h1>Typing Speed Test</h1>
+
+        <div class="user-controls">
+          <input type="text" id="username-input" placeholder="Enter Username" />
+
+          <select id="difficulty-select">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+
+          <div id="prediction-badge">
+            AI Forecast: <span id="pred-wpm">---</span> WPM |
+            <span id="pred-acc">---</span>% Acc
+          </div>
+
+          <div id="stats-display">
+            <span>WPM: <b id="wpm">0</b></span>
+            <span>Accuracy: <b id="accuracy">0%</b></span>
+            <span>Score: <b id="score">0</b></span>
+          </div>
+        </div>
+
+        <div id="text-display" class="quote-box"></div>
+
+        <textarea
+          id="input-field"
+          placeholder="Select a quote to start..."
+          disabled
+        ></textarea>
+
+        <div class="button-group">
+          <button type="button" id="start-btn">New Quote</button>
+          <button type="button" id="reset-btn">Restart</button>
+          <button type="button" id="submit-btn" style="display: none;">Submit Results</button>
+        </div>
+      </main>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+        >. Coded by <a href="#" target="_blank">Your Name Here</a>.
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
